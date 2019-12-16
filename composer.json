@@ -1,5 +1,5 @@
 {
-    "name": "wizpack/workflow",
+    "name": "didinkaj/approval",
     "description": ":description",
     "license": "MIT",
     "authors": [
@@ -10,7 +10,7 @@
         }
     ],
     "homepage": "https://github.com/didinkaj/workflow",
-    "keywords": ["Wizpack", "workflow"],
+    "keywords": ["Didinkaj", "approval"],
     "require": {
         "illuminate/support": "~5|~6"
     },
@@ -22,23 +22,26 @@
     },
     "autoload": {
         "psr-4": {
-            "Wizpack\\Workflow\\": "src/"
+            "Didinkaj\\Approval\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Wizpack\\Workflow\\Tests\\": "tests"
-        }
+            "Didinkaj\\Approval\\Tests\\": "tests"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
             "providers": [
-                "WizPack\\Workflow\\Providers\\WizPackApprovalServiceProvider",
-                "WizPack\\Workflow\\Providers\\WizPackApprovalServiceProvider",
-                "WizPack\\Workflow\\Providers\\WizPackRouteServiceProvider"
+                "Didinkaj\\Approval\\Providers\\WizPackApprovalServiceProvider",
+                "Didinkaj\\Approval\\Providers\\WizPackApprovalServiceProvider",
+                "Didinkaj\\Approval\\Providers\\WizPackRouteServiceProvider"
             ],
             "aliases": {
-                "workflow": "WizPack\\Workflow\\Facades\\WorkflowApproval"
+                "Approval": "Didinkaj\\Approval\\Facades\\WorkflowApproval"
             }
         }
     }

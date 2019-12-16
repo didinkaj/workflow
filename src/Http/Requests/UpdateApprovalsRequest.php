@@ -1,9 +1,9 @@
 <?php
 
-namespace  WizPack\Workflow\Http\Requests;
+namespace  Didinkaj\Approval\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use WizPack\Workflow\Models\Approvals;
+use Didinkaj\Approval\Models\Approvals;
 
 class UpdateApprovalsRequest extends FormRequest
 {

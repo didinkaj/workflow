@@ -1,6 +1,6 @@
 <?php
 
-namespace WizPack\Workflow\Notifications;
+namespace Didinkaj\Approval\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;

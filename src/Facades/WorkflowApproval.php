@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WizPack\Workflow\Facade;
+namespace Didinkaj\Approval\Facade;
 
 use Illuminate\Support\Facades\Facade;
 

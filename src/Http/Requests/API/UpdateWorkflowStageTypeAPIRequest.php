@@ -1,8 +1,8 @@
 <?php
 
-namespace WizPack\Workflow\Http\Requests\API;
+namespace Didinkaj\Approval\Http\Requests\API;
 
-use WizPack\Workflow\Models\WorkflowStageType;
+use Didinkaj\Approval\Models\WorkflowStageType;
 
 class UpdateWorkflowStageTypeAPIRequest extends APIRequest
 {

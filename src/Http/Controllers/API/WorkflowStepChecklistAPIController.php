@@ -1,14 +1,14 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers\API;
+namespace Didinkaj\Approval\Http\Controllers\API;
 
 use Illuminate\Http\Response;
-use WizPack\Workflow\Http\Requests\API\CreateWorkflowStepChecklistAPIRequest;
-use WizPack\Workflow\Http\Requests\API\UpdateWorkflowStepChecklistAPIRequest;
-use WizPack\Workflow\Models\WorkflowStepCheckList;
-use WizPack\Workflow\Repositories\API\WorkflowStepChecklistRepository;
+use Didinkaj\Approval\Http\Requests\API\CreateWorkflowStepChecklistAPIRequest;
+use Didinkaj\Approval\Http\Requests\API\UpdateWorkflowStepChecklistAPIRequest;
+use Didinkaj\Approval\Models\WorkflowStepCheckList;
+use Didinkaj\Approval\Repositories\API\WorkflowStepChecklistRepository;
 use Illuminate\Http\Request;
-use WizPack\Workflow\Http\Controllers\AppBaseController;
+use Didinkaj\Approval\Http\Controllers\AppBaseController;
 
 
 /**

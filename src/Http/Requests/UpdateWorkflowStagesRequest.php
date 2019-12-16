@@ -1,9 +1,9 @@
 <?php
 
-namespace  WizPack\Workflow\Http\Requests;
+namespace  Didinkaj\Approval\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use WizPack\Workflow\Models\WorkflowStage;
+use Didinkaj\Approval\Models\WorkflowStage;
 
 class UpdateWorkflowStagesRequest extends FormRequest
 {

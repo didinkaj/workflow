@@ -1,12 +1,12 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers;
+namespace Didinkaj\Approval\Http\Controllers;
 
-use WizPack\Workflow\DataTables\WorkflowStageCheckListDataTable;
-use WizPack\Workflow\Http\Requests\CreateWorkflowStageCheckListRequest;
-use WizPack\Workflow\Http\Requests\UpdateWorkflowStageCheckListRequest;
-use WizPack\Workflow\Models\WorkflowStage;
-use WizPack\Workflow\Repositories\WorkflowStageCheckListRepository;
+use Didinkaj\Approval\DataTables\WorkflowStageCheckListDataTable;
+use Didinkaj\Approval\Http\Requests\CreateWorkflowStageCheckListRequest;
+use Didinkaj\Approval\Http\Requests\UpdateWorkflowStageCheckListRequest;
+use Didinkaj\Approval\Models\WorkflowStage;
+use Didinkaj\Approval\Repositories\WorkflowStageCheckListRepository;
 use Exception;
 use Illuminate\Auth\Access\Response;
 use Laracasts\Flash\Flash;

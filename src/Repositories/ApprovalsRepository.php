@@ -1,8 +1,8 @@
 <?php
 
-namespace WizPack\Workflow\Repositories;
+namespace Didinkaj\Approval\Repositories;
 
-use WizPack\Workflow\Models\Approvals;
+use Didinkaj\Approval\Models\Approvals;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Eloquent\BaseRepository;

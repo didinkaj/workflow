@@ -1,8 +1,8 @@
 <?php
 
-namespace WizPack\Workflow\Transformers;
+namespace Didinkaj\Approval\Transformers;
 
-use WizPack\Workflow\Models\Approvals;
+use Didinkaj\Approval\Models\Approvals;
 use Illuminate\Support\Collection;
 use League\Fractal\TransformerAbstract;
 

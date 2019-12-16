@@ -1,14 +1,14 @@
 <?php
 
-namespace WizPack\Workflow\Providers;
+namespace Didinkaj\Approval\Providers;
 
-use WizPack\Workflow\Events\ApprovalRequestRaised;
-use WizPack\Workflow\Events\WorkflowStageApproved;
-use WizPack\Workflow\Events\WorkflowStageRejected;
-use WizPack\Workflow\Listeners\WhenApprovalRequestIsRaised;
-use WizPack\Workflow\Listeners\WhenWorkflowStageIsApproved;
+use Didinkaj\Approval\Events\ApprovalRequestRaised;
+use Didinkaj\Approval\Events\WorkflowStageApproved;
+use Didinkaj\Approval\Events\WorkflowStageRejected;
+use Didinkaj\Approval\Listeners\WhenApprovalRequestIsRaised;
+use Didinkaj\Approval\Listeners\WhenWorkflowStageIsApproved;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use WizPack\Workflow\Listeners\WhenWorkflowStageIsRejected;
+use Didinkaj\Approval\Listeners\WhenWorkflowStageIsRejected;
 
 class WorkflowApprovalEventServiceProvider extends ServiceProvider
 {

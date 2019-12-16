@@ -1,6 +1,6 @@
 <?php
 
-namespace  WizPack\Workflow\Mail;
+namespace  Didinkaj\Approval\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WizPack\Workflow\Http\Requests\API;
+namespace Didinkaj\Approval\Http\Requests\API;
 
 
 class ResponseUtil

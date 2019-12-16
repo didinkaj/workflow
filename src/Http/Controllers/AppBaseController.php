@@ -1,6 +1,6 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers;
+namespace Didinkaj\Approval\Http\Controllers;
 
 use InfyOm\Generator\Utils\ResponseUtil;
 use Illuminate\Support\Facades\Response;

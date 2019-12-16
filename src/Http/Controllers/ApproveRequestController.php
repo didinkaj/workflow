@@ -1,12 +1,12 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers;
+namespace Didinkaj\Approvalw\Http\Controllers;
 
-use WizPack\Workflow\Events\WorkflowStageApproved;
-use WizPack\Workflow\Repositories\ApprovalsRepository;
-use WizPack\Workflow\Repositories\WorkflowStageApproversRepository;
-use WizPack\Workflow\Repositories\WorkflowStepRepository;
-use WizPack\Workflow\Transformers\ApprovalTransformer;
+use Didinkaj\Approval\Events\WorkflowStageApproved;
+use Didinkaj\Approval\Repositories\ApprovalsRepository;
+use Didinkaj\Approval\Repositories\WorkflowStageApproversRepository;
+use Didinkaj\Approval\Repositories\WorkflowStepRepository;
+use Didinkaj\Approval\Transformers\ApprovalTransformer;
 use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
 use League\Fractal\Resource\Collection;

@@ -1,9 +1,9 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers;
+namespace Didinkaj\Approval\Http\Controllers;
 
-use WizPack\Workflow\Repositories\ApprovalsRepository;
-use WizPack\Workflow\Transformers\ApprovalTransformer;
+use Didinkaj\Approval\Repositories\ApprovalsRepository;
+use Didinkaj\Approval\Transformers\ApprovalTransformer;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
 

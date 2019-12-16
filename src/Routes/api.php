@@ -3,9 +3,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group([
-        'as'=>'wizpack-api::',
-        'namespace' => 'WizPack\Workflow\Http\Controllers\API',
-        'prefix'=>'api/wizpack',
+        'as'=>'didinkaj-approval-api::',
+        'namespace' => 'Didinkaj\Approval\Http\Controllers\API',
+        'prefix'=>'api/approval',
         'middleware' => ['web', 'auth']]
     , function () {
 

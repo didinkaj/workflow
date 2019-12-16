@@ -1,8 +1,8 @@
 <?php
 
-namespace WizPack\Workflow\Http\Requests\API;
+namespace Didinkaj\Approval\Http\Requests\API;
 
-use WizPack\Workflow\Models\WorkflowStep;
+use Didinkaj\Approval\Models\WorkflowStep;
 
 class CreateWorkflowStepAPIRequest extends APIRequest
 {

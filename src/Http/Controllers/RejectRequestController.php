@@ -1,6 +1,6 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers;
+namespace Didinkaj\Approval\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\RedirectResponse;
@@ -8,11 +8,11 @@ use Laracasts\Flash\Flash;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
 use Prettus\Validator\Exceptions\ValidatorException;
-use WizPack\Workflow\Events\WorkflowStageRejected;
-use WizPack\Workflow\Repositories\ApprovalsRepository;
-use WizPack\Workflow\Repositories\WorkflowStageApproversRepository;
-use WizPack\Workflow\Repositories\WorkflowStepRepository;
-use WizPack\Workflow\Transformers\ApprovalTransformer;
+use Didinkaj\Approval\Events\WorkflowStageRejected;
+use Didinkaj\Approval\Repositories\ApprovalsRepository;
+use Didinkaj\Approval\Repositories\WorkflowStageApproversRepository;
+use Didinkaj\Approval\Repositories\WorkflowStepRepository;
+use Didinkaj\Approval\Transformers\ApprovalTransformer;
 
 
 class RejectRequestController extends AppBaseController

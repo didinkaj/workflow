@@ -1,6 +1,6 @@
 <?php
 
-namespace WizPack\Workflow\Events;
+namespace Didinkaj\Approval\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;

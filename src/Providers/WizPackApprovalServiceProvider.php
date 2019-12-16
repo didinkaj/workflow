@@ -1,10 +1,10 @@
 <?php
 
 
-namespace WizPack\Workflow\Providers;
+namespace Didinkaj\Approval\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use WizPack\Workflow\Http\Controllers\AppBaseController;
+use Didinkaj\Approval\Http\Controllers\AppBaseController;
 
 class WizPackApprovalServiceProvider extends ServiceProvider
 {

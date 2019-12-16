@@ -1,10 +1,10 @@
 <?php
 
-namespace WizPack\Workflow\Repositories;
+namespace Didinkaj\Approval\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use  WizPack\Workflow\Models\WorkflowStep;
+use Didinkaj\Approval\Models\WorkflowStep;
 
 /**
  * Class WorkflowStepRepositoryEloquent.

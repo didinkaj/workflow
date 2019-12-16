@@ -1,14 +1,14 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers;
+namespace Didinkaj\Approval\Http\Controllers;
 
-use WizPack\Workflow\DataTables\WorkflowStageApproversDataTable;
-use WizPack\Workflow\Http\Requests\CreateWorkflowStageApproversRequest;
-use WizPack\Workflow\Http\Requests\UpdateWorkflowStageApproversRequest;
-use WizPack\Workflow\Repositories\UserRepository;
-use WizPack\Workflow\Repositories\WorkflowStageApproversRepository;
-use WizPack\Workflow\Repositories\WorkflowStagesRepository;
-use WizPack\Workflow\Repositories\WorkflowStageTypesRepository;
+use Didinkaj\Approval\DataTables\WorkflowStageApproversDataTable;
+use Didinkaj\Approval\Http\Requests\CreateWorkflowStageApproversRequest;
+use Didinkaj\Approval\Http\Requests\UpdateWorkflowStageApproversRequest;
+use Didinkaj\Approval\Repositories\UserRepository;
+use Didinkaj\Approval\Repositories\WorkflowStageApproversRepository;
+use Didinkaj\Approval\Repositories\WorkflowStagesRepository;
+use Didinkaj\Approval\Repositories\WorkflowStageTypesRepository;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;

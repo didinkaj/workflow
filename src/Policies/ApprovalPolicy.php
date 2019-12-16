@@ -1,8 +1,8 @@
 <?php
 
-namespace WizPack\Workflow\Policies;
+namespace Didinkaj\Approval\Policies;
 
-use App\User;
+use Didinkaj\Approval\Models\User;
 use WizPack\Workflow\Models\Approvals;
 use Illuminate\Auth\Access\HandlesAuthorization;
 

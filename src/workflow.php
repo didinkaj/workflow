@@ -1,6 +1,6 @@
 <?php
 
-namespace wizpack\workflow;
+namespace Didinkaj\Approval;
 
 class workflow
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace WizPack\Workflow\Interfaces;
+namespace Didinkaj\Approval\Interfaces;
 
 interface ApprovableInterface
 {

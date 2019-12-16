@@ -1,6 +1,6 @@
 <?php
 
-namespace WizPack\Workflow\Providers;
+namespace Didinkaj\Approval\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 

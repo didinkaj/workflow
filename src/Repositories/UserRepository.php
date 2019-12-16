@@ -1,8 +1,9 @@
 <?php
 
-namespace WizPack\Workflow\Repositories;
+namespace Didinkaj\Approval\Repositories;
 
-use App\Models\User;
+
+use Didinkaj\Approval\Models\User;
 
 /**
  * Class UserRepository

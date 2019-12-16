@@ -1,11 +1,9 @@
 <?php
 
-namespace WizPack\Workflow\Traits;
+namespace Didinkaj\Approval\Traits;
 
-use Carbon\Carbon;
-use WizPack\Workflow\Events\ApprovalRequestRaised;
-use Illuminate\Support\Facades\Log;
-use WizPack\Workflow\Models\Approvals;
+use Didinkaj\Approval\Events\ApprovalRequestRaised;
+use Didinkaj\Approval\Models\Approvals;
 
 trait ApprovableTrait
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace WizPack\Workflow\Listeners;
+namespace Didinkaj\Approval\Listeners;
 
-use WizPack\Workflow\Mail\WorkflowApprovalRequestMail;
-use WizPack\Workflow\Models\Approvals;
-use WizPack\Workflow\Models\WorkflowStage;
-use WizPack\Workflow\Models\WorkflowStep;
-use WizPack\Workflow\Models\WorkflowType;
+use Didinkaj\Approval\Mail\WorkflowApprovalRequestMail;
+use Didinkaj\Approval\Models\Approvals;
+use Didinkaj\Approval\Models\WorkflowStage;
+use Didinkaj\Approval\Models\WorkflowStep;
+use Didinkaj\Approval\Models\WorkflowType;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Auth;

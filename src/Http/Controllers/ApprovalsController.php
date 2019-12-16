@@ -1,13 +1,13 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers;
+namespace Didinkaj\Approval\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use WizPack\Workflow\DataTables\ApprovalsDataTable;
-use WizPack\Workflow\Http\Requests\CreateApprovalsRequest;
-use WizPack\Workflow\Http\Requests\UpdateApprovalsRequest;
-use WizPack\Workflow\Repositories\ApprovalsRepository;
-use WizPack\Workflow\Transformers\ApprovalTransformer;
+use Didinkaj\Approval\DataTables\ApprovalsDataTable;
+use Didinkaj\Approval\Http\Requests\CreateApprovalsRequest;
+use Didinkaj\Approval\Http\Requests\UpdateApprovalsRequest;
+use Didinkaj\Approval\Repositories\ApprovalsRepository;
+use Didinkaj\Approval\Transformers\ApprovalTransformer;
 use Exception;
 use Illuminate\Auth\Access\Response;
 use Laracasts\Flash\Flash;

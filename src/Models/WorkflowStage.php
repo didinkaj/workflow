@@ -1,13 +1,13 @@
 <?php
 
-namespace WizPack\Workflow\Models;
+namespace Didinkaj\Approval\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use WizPack\Workflow\Models\Scopes\WeightScope;
+use Didinkaj\Approval\Models\Scopes\WeightScope;
 
 /**
  * @SWG\Definition(

@@ -1,14 +1,14 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers;
+namespace Didinkaj\Approval\Http\Controllers;
 
-use WizPack\Workflow\DataTables\WorkflowStagesDataTable;
-use WizPack\Workflow\Http\Requests\CreateWorkflowStagesRequest;
-use WizPack\Workflow\Http\Requests\UpdateWorkflowStagesRequest;
-use WizPack\Workflow\Repositories\WorkflowStagesRepository;
-use WizPack\Workflow\Repositories\WorkflowStageTypesRepository;
-use WizPack\Workflow\Repositories\WorkflowStepRepository;
-use WizPack\Workflow\Repositories\WorkflowTypesRepository;
+use Didinkaj\Approval\DataTables\WorkflowStagesDataTable;
+use Didinkaj\Approval\Http\Requests\CreateWorkflowStagesRequest;
+use Didinkaj\Approval\Http\Requests\UpdateWorkflowStagesRequest;
+use Didinkaj\Approval\Repositories\WorkflowStagesRepository;
+use Didinkaj\Approval\Repositories\WorkflowStageTypesRepository;
+use Didinkaj\Approval\Repositories\WorkflowStepRepository;
+use Didinkaj\Approval\Repositories\WorkflowTypesRepository;
 use Illuminate\Support\Facades\Response;
 use Laracasts\Flash\Flash;
 use Prettus\Validator\Exceptions\ValidatorException;

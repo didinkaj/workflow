@@ -1,8 +1,8 @@
 <?php
 
-namespace WizPack\Workflow\DataTables;
+namespace Didinkaj\Approval\DataTables;
 
-use WizPack\Workflow\Models\WorkflowStageApprovers;
+use Didinkaj\Approval\Models\WorkflowStageApprovers;
 use Yajra\DataTables\DataTableAbstract;
 use Yajra\DataTables\Html\Builder;
 use Yajra\DataTables\Services\DataTable;

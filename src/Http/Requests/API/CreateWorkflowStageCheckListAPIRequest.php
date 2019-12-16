@@ -1,8 +1,8 @@
 <?php
 
-namespace WizPack\Workflow\Http\Requests\API;
+namespace Didinkaj\Approval\Http\Requests\API;
 
-use WizPack\Workflow\Models\WorkflowStageCheckList;
+use Didinkaj\Approval\Models\WorkflowStageCheckList;
 
 class CreateWorkflowStageCheckListAPIRequest extends APIRequest
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace WizPack\Workflow\Repositories\API;
+namespace Didinkaj\Approval\Repositories\API;
 
-use WizPack\Workflow\Models\WorkflowStageType;
-use WizPack\Workflow\Repositories\BaseRepository;
+use Didinkaj\Approval\Models\WorkflowStageType;
+use Didinkaj\Approval\Repositories\BaseRepository;
 
 /**
  * Class WorkflowStageTypeRepository

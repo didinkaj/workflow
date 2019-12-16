@@ -1,6 +1,6 @@
 <?php
 
-namespace WizPack\Workflow\Models;
+namespace Didinkaj\Approval\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

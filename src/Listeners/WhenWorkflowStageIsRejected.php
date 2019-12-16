@@ -1,15 +1,10 @@
 <?php
 
-namespace WizPack\Workflow\Listeners;
+namespace Didinkaj\Approval\Listeners;
 
-use WizPack\Workflow\Http\Controllers\WorkflowController;
-use WizPack\Workflow\Mail\WorkflowApprovedMail;
-use WizPack\Workflow\Mail\WorkflowRejectedMail;
-use WizPack\Workflow\Models\Approvals;
+use Didinkaj\Approval\Mail\WorkflowRejectedMail;
+use Didinkaj\Approval\Models\Approvals;
 use Carbon\Carbon;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class WhenWorkflowStageIsRejected

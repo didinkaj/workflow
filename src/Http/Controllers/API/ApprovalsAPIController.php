@@ -1,14 +1,14 @@
 <?php
 
-namespace WizPack\Workflow\Http\Controllers\API;
+namespace Didinkaj\Approval\Http\Controllers\API;
 
 use Illuminate\Http\Response;
-use WizPack\Workflow\Http\Requests\API\CreateApprovalsAPIRequest;
-use WizPack\Workflow\Http\Requests\API\UpdateApprovalsAPIRequest;
-use WizPack\Workflow\Models\Approvals;
+use Didinkaj\Approval\Http\Requests\API\CreateApprovalsAPIRequest;
+use Didinkaj\Approval\Http\Requests\API\UpdateApprovalsAPIRequest;
+use Didinkaj\Approval\Models\Approvals;
 use Illuminate\Http\Request;
-use WizPack\Workflow\Http\Controllers\AppBaseController;
-use WizPack\Workflow\Repositories\API\ApprovalsRepository;
+use Didinkaj\Approval\Http\Controllers\AppBaseController;
+use Didinkaj\ApprovalRepositories\API\ApprovalsRepository;
 
 
 /**

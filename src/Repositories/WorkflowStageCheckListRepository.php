@@ -1,8 +1,8 @@
 <?php
 
-namespace WizPack\Workflow\Repositories;
+namespace Didinkaj\Approval\Repositories;
 
-use  WizPack\Workflow\Models\WorkflowStageCheckList;
+use  Didinkaj\Approval\Models\WorkflowStageCheckList;
 use Prettus\Repository\Eloquent\BaseRepository;
 
 /**

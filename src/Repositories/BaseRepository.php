@@ -1,6 +1,6 @@
 <?php
 
-namespace WizPack\Workflow\Repositories;
+namespace Didinkaj\Approval\Repositories;
 
 use Exception;
 use Illuminate\Container\Container as Application;

@@ -1,8 +1,6 @@
 <?php
 
-
-namespace WizPack\Workflow\Traits;
-
+namespace Didinkaj\Approval\Traits;
 
 use Exception;
 use Illuminate\Container\Container as Application;
