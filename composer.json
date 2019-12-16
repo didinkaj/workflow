@@ -33,11 +33,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wizpack\\Workflow\\Providers\\WizPackApprovalServiceProvider",
-                "Wizpack\\Workflow\\Providers\\WorkflowApprovalServiceProvider"
+                "WizPack\\Workflow\\Providers\\WizPackApprovalServiceProvider",
+                "WizPack\\Workflow\\Providers\\WizPackApprovalServiceProvider",
+                "WizPack\\Workflow\\Providers\\WizPackRouteServiceProvider"
             ],
             "aliases": {
-                "workflow": "Wizpack\\Workflow\\Facades\\WorkflowApproval"
+                "workflow": "WizPack\\Workflow\\Facades\\WorkflowApproval"
             }
         }
     }
