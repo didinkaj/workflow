@@ -3,7 +3,6 @@
 namespace WizPack\Workflow\Http\Requests\API;
 
 use WizPack\Workflow\Models\WorkflowStep;
-use InfyOm\Generator\Request\APIRequest;
 
 class CreateWorkflowStepAPIRequest extends APIRequest
 {

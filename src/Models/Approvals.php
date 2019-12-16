@@ -115,7 +115,8 @@ class Approvals extends Model
         'payload',
         'sent_by',
         'approved',
-        'approved_on',
+        'approved_at',
+        'rejected_at',
         'awaiting_stage_id'
     ];
 
@@ -134,7 +135,8 @@ class Approvals extends Model
         'payload' => 'string',
         'sent_by' => 'integer',
         'approved' => 'boolean',
-        'approved_on' => 'datetime',
+        'approved_at'=> 'datetime',
+        'rejected_at'=> 'datetime',
         'awaiting_stage_id' => 'integer'
     ];
 
@@ -155,7 +157,7 @@ class Approvals extends Model
      **/
     public function awaitingStage()
     {
-        return $this->belongsTo(WorkflowStage::class, 'awaiting_stage_id','id');
+        return $this->belongsTo(WorkflowStage::class, 'awaiting_stage_id', 'id');
     }
 
     /**
@@ -222,10 +224,15 @@ class Approvals extends Model
 
     public function approvalStatus()
     {
-        if($this->approved){
+        if (!empty($this->approved_at)) {
             return '<span class="label label-success">Approved</span>';
         }
 
+        if (!empty($this->rejected_at)) {
+            return '<span class="label label-danger">Rejected</span>';
+        }
+
         return '<span class="label label-primary">Pending</span>';
+
     }
 }

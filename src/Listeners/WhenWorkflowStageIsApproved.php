@@ -35,6 +35,7 @@ class WhenWorkflowStageIsApproved
         $approvedStep = collect($event->approvedStep);
         $workflowPayload = $workflow->pluck('workflowDetails')->first();
         $currentStageApprovers = $workflow->pluck('currentStageApprovers')->flatten(1);
+        $currentApprovalStage = $workflow->pluck('currentApprovalStage')->flatten(1);
 
 
         $nextAprrovalWorkflowInfo = (app(WorkflowController::class)->getWorkflowInfo($workflowPayload['id']));
@@ -51,7 +52,7 @@ class WhenWorkflowStageIsApproved
         }
 
         if (empty($nextStageId)) {
-            $nextStageUpdate->approved_on = Carbon::now();
+            $nextStageUpdate->approved_at = Carbon::now();
             $nextStageUpdate->approved = 1;
             $nextStageUpdate->save();
             //mark workflow complete
@@ -67,8 +68,14 @@ class WhenWorkflowStageIsApproved
         });
         $sentBy = $workflowPayload['sent_by'];
 
-        Mail::to($allApprovers)
+        $approvalInfo = [
+            'sentBy' => $sentBy,
+            'approved_stage' => $currentApprovalStage->pluck('workflow_stage_type_name')->first(),
+            'next_stage' => $nextApprovalStage->pluck('workflow_stage_type_name')->first()
+        ];
+
+        return Mail::to($allApprovers)
             ->cc($sentBy)
-            ->send(new WorkflowApprovedMail($workflowPayload, $approvedStep, $sentBy));
+            ->send(new WorkflowApprovedMail($workflowPayload, $approvedStep, $approvalInfo));
     }
 }

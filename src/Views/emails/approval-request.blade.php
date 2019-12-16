@@ -2,8 +2,8 @@
 @section('content')
     <p>Hello</p>
     <p>
-        {{auth()->user()->name}} has submitted an approval request. Please go {{env('APP_NAME')}} and review it using
-        this link {!!  $model->previewLink() !!}.
+        {{auth()->user()->name}} has submitted an approval request for <b>{{$workflow['name']}}</b>. Please review the request using
+        this link <a href="{{env('APP_URL').'/'.$url}}" >View</a>
     </p>
 
     <p>

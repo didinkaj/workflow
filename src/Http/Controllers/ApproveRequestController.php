@@ -84,86 +84,8 @@ class ApproveRequestController extends AppBaseController
             return redirect('/wizpack/approvals/' . $workflowApprovalId);
         }
 
-        Flash::success('An error occurred stage not npproved ');
+        Flash::success('An error occurred stage not approved ');
         return redirect()->back();
 
-    }
-
-    /**
-     * retrieves approval stages pending approval
-     *
-     * @param $workflow
-     * @return mixed
-     */
-    public function getStagesPendingApproval($workflow)
-    {
-        $approvedStages = $this->getApprovedStages($workflow)->pluck('id')->toArray();
-        return collect($workflow->workflowSteps)
-            ->filter(function ($step) use ($approvedStages) {
-                return !in_array($step->workflow_stage_id, $approvedStages);
-            })->pluck('workflowStage')
-            ->sortBy('weight')
-            ->unique('workflow_stage_type_id');
-    }
-
-    /**
-     * get the next  stage to be approved
-     *
-     * @param $workflow
-     * @return mixed
-     */
-    public function getNextStageToBeApproved($workflow)
-    {
-        return $this->getStagesPendingApproval($workflow)->first();
-    }
-
-    /**
-     * get the initiator and approvers of a request
-     *
-     * @param $workflow
-     * @return void
-     */
-    public function getApprovers($workflow)
-    {
-        $workflowActiveStage = $this->getNextStageToBeApproved($workflow);
-
-        return $this->approversRepository->with('user')->findWhere([
-            'workflow_stage_id' => $workflowActiveStage->id,
-            'workflow_stage_type_id' => $workflowActiveStage->workflow_stage_type_id
-        ])->pluck('user')->unique('email');
-    }
-
-    /**
-     * @param $workflow
-     * @return Collection
-     */
-    public function getInitiators($workflow)
-    {
-        return collect([$workflow->user, $workflow->sentBy])->reject(function ($user) {
-            return empty($user);
-        })->unique('email');
-    }
-
-    /**
-     * @param $workflow
-     * @return mixed
-     */
-    public function getSteps($workflow)
-    {
-        return $workflow->workflowSteps;
-    }
-
-    /**
-     * @param $workflow
-     * @return mixed
-     */
-    public function getApprovedStages($workflow)
-    {
-        return collect($workflow->workflowSteps)
-            ->filter(function ($step) {
-                return !empty($step->approved_at) || !empty($step->rejected_at);
-            })->pluck('workflowStage')
-            ->sortBy('weight')
-            ->unique('workflow_stage_type_id');
     }
 }

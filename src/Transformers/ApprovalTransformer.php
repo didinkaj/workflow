@@ -26,12 +26,17 @@ class ApprovalTransformer extends TransformerAbstract
 
         $currentStage = $this->getCurrentApprovalStage($stages);
 
+        $approvalHasRejection = $currentStage->filter(function ($stage){
+            return(!empty($stage['rejected_by']));
+        })->isNotEmpty();
+
         return [
             "workflowDetails" => $this->getApprovalDetails($model),
             "approvalStagesStepsAndApprovers" => $stages,
             "workflowInfo" => $model->approvable,
             "currentApprovalStage" => $currentStage,
             "currentStageApprovers" => $this->getCurrentApprovalStageApprovers($currentStage),
+            "approvalRejected" =>$approvalHasRejection
         ];
     }
 
@@ -91,7 +96,8 @@ class ApprovalTransformer extends TransformerAbstract
             "collection_name" => "leave_approval",
             "sent_by" => $model->sentBy,
             "approved" => $model->approved,
-            "approved_on" => $model->approved_on,
+            "approved_at" => $model->approved_at,
+            "rejected_at" => $model->rejected_at,
             "awaiting_stage_id" => $model->awaiting_stage_id,
             "created_by" => $model->user->name,
             'created_at' => $model->created_at->format('d-M-Y'),

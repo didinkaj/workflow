@@ -2,6 +2,7 @@
 
 namespace WizPack\Workflow\Traits;
 
+use Carbon\Carbon;
 use WizPack\Workflow\Events\ApprovalRequestRaised;
 use Illuminate\Support\Facades\Log;
 use WizPack\Workflow\Models\Approvals;
@@ -26,7 +27,7 @@ trait ApprovableTrait
 
         static::deleted(
             function ($model) {
-                Log::info(serialize($model) . " " . self::$approvalType);
+                $model->approval->delete();
             }
         );
     }
@@ -76,27 +77,20 @@ trait ApprovableTrait
     }
 
     /**
-     * marking the approval as complete
-     * @param $id
-     */
-    public function markApprovalComplete($id)
-    {
-        $model = self::find($id);
-        $model->approved = 1;
-        $model->save();
-    }
-
-    /**
      * formatting the approved field
      *
      * @return string
      */
     public function approvedLabel()
     {
-        if ($this->approved) {
-            return "<a href=" . env('APP_URL') .'/wizpack/approvals/'. $this->approval->id . " class='label label-success'> Approved</a>";
+        if (!empty($this->approved_at)) {
+            return "<a href=" . env('APP_URL') . '/wizpack/approvals/' . $this->approval->id . " class='label label-success'> Approved</a>";
         }
 
-        return "<a href=" . env('APP_URL') .'/wizpack/approvals/'. $this->approval->id . " class='label label-info'> Pending</a>";
+        if (!empty($this->rejected_at)) {
+            return "<a href=" . env('APP_URL') . '/wizpack/approvals/' . $this->approval->id . " class='label label-danger'> Rejected</a>";
+        }
+
+        return "<a href=" . env('APP_URL') . '/wizpack/approvals/' . $this->approval->id . " class='label label-info'> Pending</a>";
     }
 }

@@ -8,7 +8,7 @@ use WizPack\Workflow\Http\Requests\API\UpdateWorkflowTypeAPIRequest;
 use WizPack\Workflow\Models\WorkflowType;
 use WizPack\Workflow\Repositories\API\WorkflowTypeRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
+use WizPack\Workflow\Http\Controllers\AppBaseController;
 
 /**
  * Class WorkflowTypeController

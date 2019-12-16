@@ -3,11 +3,11 @@
 namespace WizPack\Workflow\Models;
 
 
-use App\Models\Workflow\Scopes\WeightScope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use WizPack\Workflow\Models\Scopes\WeightScope;
 
 /**
  * @SWG\Definition(

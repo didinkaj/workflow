@@ -89,13 +89,22 @@ class ApprovalsController extends AppBaseController
 
         $workflow = $data->pluck('workflowDetails')->first();
 
+        $approvalHasBeenRejected = $data->pluck('approvalRejected')->first();
+
         if (empty($approvals)) {
             Flash::error('Approvals not found');
 
             return redirect(route('wizpack::approvals.index'));
         }
 
-        return view('wizpack::approvals.show', compact('approvals', 'workflow', 'approvers','currentStage'));
+        return view('wizpack::approvals.show', compact(
+                'approvals',
+                'workflow',
+                'approvers',
+                'currentStage',
+                'approvalHasBeenRejected'
+            )
+        );
     }
 
     /**

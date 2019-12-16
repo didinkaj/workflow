@@ -98,7 +98,8 @@ class ApprovalsDataTable extends DataTable
             'payload' => ['visible' => false],
             'sent_by'=> ['visible' => false],
             'status',
-            'approved_on'=> ['visible' => false],
+            'approved_at'=> ['visible' => false],
+            'rejected_at'=> ['visible' => false],
             'awaiting_stage_id' => ['visible' => false]
         ];
     }

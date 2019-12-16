@@ -2,8 +2,7 @@
 
 namespace WizPack\Workflow\Http\Requests\API;
 
-use App\Models\WorkflowStageCheckList;
-use InfyOm\Generator\Request\APIRequest;
+use WizPack\Workflow\Models\WorkflowStageCheckList;
 
 class CreateWorkflowStageCheckListAPIRequest extends APIRequest
 {

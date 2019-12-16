@@ -26,7 +26,8 @@ class ApprovalsRepository extends BaseRepository
         'payload',
         'sent_by',
         'approved',
-        'approved_on',
+        'approved_at',
+        'rejected_at',
         'awaiting_stage_id'
     ];
 

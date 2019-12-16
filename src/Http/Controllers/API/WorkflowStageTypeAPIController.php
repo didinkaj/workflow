@@ -2,13 +2,13 @@
 
 namespace WizPack\Workflow\Http\Controllers\API;
 
+use Illuminate\Http\Response;
 use WizPack\Workflow\Http\Requests\API\CreateWorkflowStageTypeAPIRequest;
 use WizPack\Workflow\Http\Requests\API\UpdateWorkflowStageTypeAPIRequest;
 use WizPack\Workflow\Models\WorkflowStageType;
 use WizPack\Workflow\Repositories\API\WorkflowStageTypeRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
-use Response;
+use WizPack\Workflow\Http\Controllers\AppBaseController;
 
 /**
  * Class WorkflowStageTypeController

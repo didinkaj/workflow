@@ -26,4 +26,6 @@ Route::group([
     //approval/rejection
     Route::get('workflowApproveRequest/{Approvals}/{workflowStage}', 'ApproveRequestController@handle');
 
+    Route::get('workflowRejecctRequest/{Approvals}/{workflowStage}', 'RejectRequestController@handle');
+
 });

@@ -3,7 +3,7 @@
 namespace WizPack\Workflow\Repositories\API;
 
 use WizPack\Workflow\Models\WorkflowStageCheckList;
-use App\Repositories\BaseRepository;
+use WizPack\Workflow\Repositories\BaseRepository;
 
 /**
  * Class WorkflowStageCheckListRepository

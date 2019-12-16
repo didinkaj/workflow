@@ -8,7 +8,7 @@ use WizPack\Workflow\Http\Requests\API\UpdateWorkflowStageApproversAPIRequest;
 use WizPack\Workflow\Models\WorkflowStageApprovers;
 use WizPack\Workflow\Repositories\API\WorkflowStageApproversRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
+use WizPack\Workflow\Http\Controllers\AppBaseController;
 
 /**
  * Class WorkflowStageApproversController

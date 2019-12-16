@@ -52,4 +52,12 @@ interface ApprovableInterface
      */
     public function markApprovalComplete($id);
 
+    /**
+     * The field to be marked rejected when an approval process is rejected
+     * the method is defined on the trait,
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function markApprovalAsRejected($id);
 }

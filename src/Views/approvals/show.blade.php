@@ -51,17 +51,21 @@
                                                     </ul>
                                                 @endif
                                                 @if(!empty($stage['rejected_by']))
-                                                    <span class="label label-success">Rejected By:</span>
+                                                    <span class="label label-danger">Rejected By:</span>
                                                     <ul>
                                                         @foreach(($stage['rejected_by']) as $approvedBy)
                                                             <li>{{$approvedBy['user_name']}}</li>
-                                                            <li>{{formatToDateTime($approvedBy['approved_at'])}}</li>
+                                                            <li>{{formatToDateTime($approvedBy['rejected_at'])}}</li>
                                                         @endforeach
                                                     </ul>
                                                 @endif
 
-                                                @if(empty($stage['rejected_by']) && empty($stage['approved_by']))
+                                                @if(empty($stage['rejected_by']) && empty($stage['approved_by']) && !$approvalHasBeenRejected)
                                                     <span class="label label-info">Approval pending</span>
+                                                @endif
+
+                                                @if(empty($stage['rejected_by']) && empty($stage['approved_by']) && $approvalHasBeenRejected)
+                                                    <span class="label label-default text-center"></span>
                                                 @endif
                                             </td>
                                         </tr>
@@ -73,6 +77,8 @@
                                            class="btn btn-primary btn-sm"> CheckList</a>
                                         <a href="{{url('/wizpack/workflowApproveRequest/'.$workflow['id'].'/'.$stage['id'])}}"
                                            class="btn btn-success btn-sm">Approve</a>
+                                        <a href="{{url('/wizpack/workflowRejecctRequest/'.$workflow['id'].'/'.$stage['id'])}}"
+                                           class="btn btn-danger btn-sm">Rejecct</a>
                                     @endif
                                 </td>
                             </tr>

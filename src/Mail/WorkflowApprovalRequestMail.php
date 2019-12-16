@@ -30,7 +30,7 @@ class WorkflowApprovalRequestMail extends Mailable
         $this->workflow =$workflow;
         $this->stageApprovers = $stageApprovers;
         $this->model = $model;
-        $this->url = 'approvals/'.$workflowInfo['workflow_id'];
+        $this->url = 'wizpack/approvals/'.$workflowInfo['workflow_id'];
         $this->text = 'view approval';
     }
 
@@ -41,7 +41,7 @@ class WorkflowApprovalRequestMail extends Mailable
      */
     public function build()
     {
-        $subject= $this->workflow->name. " request Approved";
+        $subject = "Approval request: #". $this->workflow->id.' '.$this->workflow->name;
 
         return $this->subject($subject)->view('wizpack::emails.approval-request');
     }

@@ -14,7 +14,7 @@ Route::group([
         Route::resource('workflowStageCheckLists', 'WorkflowStageCheckListAPIController');
         Route::resource('workflowStageTypes', 'WorkflowStageTypeAPIController');
         Route::resource('workflowSteps', 'WorkflowStepAPIController');
-        Route::resource('workflowType', 'WorkflowStepAPIController');
+        Route::resource('workflowType', 'WorkflowTypeAPIController');
         Route::resource('WorkflowStageApprovers', 'WorkflowStageApproversAPIController');
         Route::resource('WorkflowStepChecklist', 'WorkflowStepChecklistAPIController');
     }

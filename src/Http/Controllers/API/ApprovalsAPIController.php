@@ -7,7 +7,7 @@ use WizPack\Workflow\Http\Requests\API\CreateApprovalsAPIRequest;
 use WizPack\Workflow\Http\Requests\API\UpdateApprovalsAPIRequest;
 use WizPack\Workflow\Models\Approvals;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
+use WizPack\Workflow\Http\Controllers\AppBaseController;
 use WizPack\Workflow\Repositories\API\ApprovalsRepository;
 
 

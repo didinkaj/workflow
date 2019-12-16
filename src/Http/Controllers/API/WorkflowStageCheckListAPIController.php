@@ -8,7 +8,7 @@ use WizPack\Workflow\Http\Requests\API\UpdateWorkflowStageCheckListAPIRequest;
 use WizPack\Workflow\Models\WorkflowStageCheckList;
 use WizPack\Workflow\Repositories\API\WorkflowStageCheckListRepository;
 use Illuminate\Http\Request;
-use App\Http\Controllers\AppBaseController;
+use WizPack\Workflow\Http\Controllers\AppBaseController;
 
 /**
  * Class WorkflowStageCheckListController

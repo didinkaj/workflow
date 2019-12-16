@@ -4,13 +4,13 @@ namespace WizPack\Workflow\Providers;
 
 use WizPack\Workflow\Events\ApprovalRequestRaised;
 use WizPack\Workflow\Events\WorkflowStageApproved;
+use WizPack\Workflow\Events\WorkflowStageRejected;
 use WizPack\Workflow\Listeners\WhenApprovalRequestIsRaised;
 use WizPack\Workflow\Listeners\WhenWorkflowStageIsApproved;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use WizPack\Workflow\Listeners\WhenWorkflowStageIsRejected;
 
-class WorkflowApprovalServiceProvider extends ServiceProvider
+class WorkflowApprovalEventServiceProvider extends ServiceProvider
 {
     /**
      * The event listener mappings for the application.
@@ -18,14 +18,14 @@ class WorkflowApprovalServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        Registered::class => [
-            SendEmailVerificationNotification::class,
-        ],
         ApprovalRequestRaised::class => [
             WhenApprovalRequestIsRaised::class,
         ],
         WorkflowStageApproved::class => [
             WhenWorkflowStageIsApproved::class
+        ],
+        WorkflowStageRejected::class=>[
+            WhenWorkflowStageIsRejected::class
         ]
     ];
 

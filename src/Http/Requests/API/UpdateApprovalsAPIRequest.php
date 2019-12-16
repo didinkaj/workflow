@@ -3,7 +3,6 @@
 namespace WizPack\Workflow\Http\Requests\API;
 
 use WizPack\Workflow\Models\Approvals;
-use InfyOm\Generator\Request\APIRequest;
 
 class UpdateApprovalsAPIRequest extends APIRequest
 {
