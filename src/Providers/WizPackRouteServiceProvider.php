@@ -1,11 +1,8 @@
 <?php
 
-
 namespace WizPack\Workflow\Providers;
 
-
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-
 
 class WizPackRouteServiceProvider extends ServiceProvider
 {
