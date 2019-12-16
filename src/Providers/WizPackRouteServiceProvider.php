@@ -7,7 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 class WizPackRouteServiceProvider extends ServiceProvider
 {
 
-    protected $namespace = 'WizPack\Workflow\Http\Controllers';
+    protected $namespace = 'Didinkaj\Approval\Http\Controllers';
 
     public function map()
     {

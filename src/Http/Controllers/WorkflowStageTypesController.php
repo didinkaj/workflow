@@ -34,7 +34,7 @@ class WorkflowStageTypesController extends AppBaseController
      */
     public function index(WorkflowStageTypesDataTable $workflowStageTypesDataTable)
     {
-        return $workflowStageTypesDataTable->render('wizpack::workflow_stage_types.index');
+        return $workflowStageTypesDataTable->render('didinkaj-approval::workflow_stage_types.index');
     }
 
     /**
@@ -44,7 +44,7 @@ class WorkflowStageTypesController extends AppBaseController
      */
     public function create()
     {
-        return view('wizpack::workflow_stage_types.create');
+        return view('didinkaj-approval::workflow_stage_types.create');
     }
 
     /**
@@ -63,7 +63,7 @@ class WorkflowStageTypesController extends AppBaseController
 
         Flash::success('Workflow Stage Types saved successfully.');
 
-        return redirect(route('wizpack::workflowStageTypes.index'));
+        return redirect(route('didinkaj-approval::workflowStageTypes.index'));
     }
 
     /**
@@ -80,10 +80,10 @@ class WorkflowStageTypesController extends AppBaseController
         if (empty($workflowStageTypes)) {
             Flash::error('Workflow Stage Types not found');
 
-            return redirect(route('wizpack::workflowStageTypes.index'));
+            return redirect(route('didinkaj-approval::workflowStageTypes.index'));
         }
 
-        return view('wizpack::workflow_stage_types.show')->with('workflowStageTypes', $workflowStageTypes);
+        return view('didinkaj-approval::workflow_stage_types.show')->with('workflowStageTypes', $workflowStageTypes);
     }
 
     /**
@@ -100,10 +100,10 @@ class WorkflowStageTypesController extends AppBaseController
         if (empty($workflowStageTypes)) {
             Flash::error('Workflow Stage Types not found');
 
-            return redirect(route('wizpack::workflowStageTypes.index'));
+            return redirect(route('didinkaj-approval::workflowStageTypes.index'));
         }
 
-        return view('wizpack::workflow_stage_types.edit')->with('workflowStageTypes', $workflowStageTypes);
+        return view('didinkaj-approval::workflow_stage_types.edit')->with('workflowStageTypes', $workflowStageTypes);
     }
 
     /**
@@ -122,14 +122,14 @@ class WorkflowStageTypesController extends AppBaseController
         if (empty($workflowStageTypes)) {
             Flash::error('Workflow Stage Types not found');
 
-            return redirect(route('wizpack::workflowStageTypes.index'));
+            return redirect(route('didinkaj-approval::workflowStageTypes.index'));
         }
 
         $workflowStageTypes = $this->workflowStageTypesRepository->update($request->all(), $id);
 
         Flash::success('Workflow Stage Types updated successfully.');
 
-        return redirect(route('wizpack::workflowStageTypes.index'));
+        return redirect(route('didinkaj-approval::workflowStageTypes.index'));
     }
 
     /**
@@ -154,13 +154,13 @@ class WorkflowStageTypesController extends AppBaseController
         if (empty($workflowStageTypes)) {
             Flash::error('Workflow Stage Types not found');
 
-            return redirect(route('wizpack::workflowStageTypes.index'));
+            return redirect(route('didinkaj-approval::workflowStageTypes.index'));
         }
 
         $this->workflowStageTypesRepository->delete($id);
 
         Flash::success('Workflow Stage Types deleted successfully.');
 
-        return redirect(route('wizpack::workflowStageTypes.index'));
+        return redirect(route('didinkaj-approval::workflowStageTypes.index'));
     }
 }

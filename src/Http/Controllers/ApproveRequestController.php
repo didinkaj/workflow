@@ -55,7 +55,7 @@ class ApproveRequestController extends AppBaseController
         if (!$approvers->contains('user_id', auth()->id())) {
             Flash::error('You are not authorized to approve this request');
 
-            return redirect('/wizpack/approvals/' . $workflowApprovalId);
+            return redirect('/workflow/approvals/' . $workflowApprovalId);
         }
 
         $workflowStageToBeApproved = $data->pluck('currentApprovalStage')->flatten(1)->first();
@@ -82,7 +82,7 @@ class ApproveRequestController extends AppBaseController
             event(new WorkflowStageApproved($data, $approvedStep));
 
             Flash::success('Stage Approved successfully');
-            return redirect('/wizpack/approvals/' . $workflowApprovalId);
+            return redirect('/workflow/approvals/' . $workflowApprovalId);
         }
 
         Flash::success('An error occurred stage not approved ');

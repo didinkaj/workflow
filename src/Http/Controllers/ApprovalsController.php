@@ -33,7 +33,7 @@ class ApprovalsController extends AppBaseController
      */
     public function index(ApprovalsDataTable $approvalsDataTable)
     {
-        return $approvalsDataTable->render('wizpack::approvals.index');
+        return $approvalsDataTable->render('didinkaj-approval::approvals.index');
     }
 
     /**
@@ -43,7 +43,7 @@ class ApprovalsController extends AppBaseController
      */
     public function create()
     {
-        return view('wizpack::approvals.create');
+        return view('didinkaj-approval::approvals.create');
     }
 
     /**
@@ -62,7 +62,7 @@ class ApprovalsController extends AppBaseController
 
         Flash::success('Approvals saved successfully.');
 
-        return redirect(route('wizpack::workflow.approvals.index'));
+        return redirect(route('didinkaj-approval::workflow.approvals.index'));
     }
 
     /**
@@ -93,10 +93,10 @@ class ApprovalsController extends AppBaseController
         if (empty($approvals)) {
             Flash::error('Approvals not found');
 
-            return redirect(route('wizpack::approvals.index'));
+            return redirect(route('didinkaj-approval::approvals.index'));
         }
 
-        return view('wizpack::approvals.show', compact(
+        return view('didinkaj-approval::approvals.show', compact(
                 'approvals',
                 'workflow',
                 'approvers',
@@ -120,10 +120,10 @@ class ApprovalsController extends AppBaseController
         if (empty($approvals)) {
             Flash::error('Approvals not found');
 
-            return redirect(route('wizpack::approvals.index'));
+            return redirect(route('didinkaj-approval::approvals.index'));
         }
 
-        return view('wizpack::approvals.edit')->with('approvals', $approvals);
+        return view('didinkaj-approval::approvals.edit')->with('approvals', $approvals);
     }
 
     /**
@@ -142,14 +142,14 @@ class ApprovalsController extends AppBaseController
         if (empty($approvals)) {
             Flash::error('Approvals not found');
 
-            return redirect(route('wizpack::approvals.index'));
+            return redirect(route('didinkaj-approval::approvals.index'));
         }
 
         $approvals = $this->approvalsRepository->update($request->all(), $id);
 
         Flash::success('Approvals updated successfully.');
 
-        return redirect(route('wizpack::approvals.index'));
+        return redirect(route('didinkaj-approval::approvals.index'));
     }
 
     /**
@@ -167,13 +167,13 @@ class ApprovalsController extends AppBaseController
         if (empty($approvals)) {
             Flash::error('Approvals not found');
 
-            return redirect(route('wizpack::approvals.index'));
+            return redirect(route('didinkaj-approval::approvals.index'));
         }
 
         $this->approvalsRepository->delete($id);
 
         Flash::success('Approvals deleted successfully.');
 
-        return redirect(route('wizpack::approvals.index'));
+        return redirect(route('didinkaj-approval::approvals.index'));
     }
 }

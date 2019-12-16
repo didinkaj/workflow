@@ -44,7 +44,7 @@ class WorkflowStagesController extends AppBaseController
      */
     public function index(WorkflowStagesDataTable $workflowStagesDataTable)
     {
-        return $workflowStagesDataTable->render('wizpack::workflow_stages.index');
+        return $workflowStagesDataTable->render('didinkaj-approval::workflow_stages.index');
     }
 
     /**
@@ -54,7 +54,7 @@ class WorkflowStagesController extends AppBaseController
      */
     public function create()
     {
-        return view('wizpack::workflow_stages.create')
+        return view('didinkaj-approval::workflow_stages.create')
             ->withWorkFlowTypes($this->workflowTypesRepository->all(['name','id'])->pluck('name', 'id'))
             ->withWorkFlowStageTypes($this->stageTypesRepository->all(['name','id'])->pluck('name', 'id'));
     }
@@ -75,7 +75,7 @@ class WorkflowStagesController extends AppBaseController
 
         Flash::success('Workflow Stages saved successfully.');
 
-        return redirect(route('wizpack::workflowStages.index'));
+        return redirect(route('didinkaj-approval::workflowStages.index'));
     }
 
     /**
@@ -92,7 +92,7 @@ class WorkflowStagesController extends AppBaseController
         if (empty($workflowStages)) {
             Flash::error('Workflow Stages not found');
 
-            return redirect(route('wizpack::workflowStages.index'));
+            return redirect(route('didinkaj-approval::workflowStages.index'));
         }
 
         return view('wizpack::workflow_stages.show')
@@ -115,7 +115,7 @@ class WorkflowStagesController extends AppBaseController
         if (empty($workflowStages)) {
             Flash::error('Workflow Stages not found');
 
-            return redirect(route('wizpack::workflowStages.index'));
+            return redirect(route('didinkaj-approval::workflowStages.index'));
         }
 
         return view('wizpack::workflow_stages.edit')->with('workflowStages', $workflowStages)
@@ -139,14 +139,14 @@ class WorkflowStagesController extends AppBaseController
         if (empty($workflowStages)) {
             Flash::error('Workflow Stages not found');
 
-            return redirect(route('wizpack::workflowStages.index'));
+            return redirect(route('didinkaj-approval::workflowStages.index'));
         }
 
         $workflowStages = $this->workflowStagesRepository->update($request->all(), $id);
 
         Flash::success('Workflow Stages updated successfully.');
 
-        return redirect(route('wizpack::workflowStages.index'));
+        return redirect(route('didinkaj-approval::workflowStages.index'));
     }
 
     /**
@@ -171,7 +171,7 @@ class WorkflowStagesController extends AppBaseController
         if (empty($workflowStages)) {
             Flash::error('Workflow Stages not found');
 
-            return redirect(route('wizpack::workflowStages.index'));
+            return redirect(route('didinkaj-approval::workflowStages.index'));
         }
 
         $this->workflowStagesRepository->delete($id);

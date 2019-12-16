@@ -36,7 +36,7 @@ class WorkflowStageCheckListController extends AppBaseController
      */
     public function index(WorkflowStageCheckListDataTable $workflowStageCheckListDataTable)
     {
-        return $workflowStageCheckListDataTable->render('wizpack::workflow_stage_check_lists.index');
+        return $workflowStageCheckListDataTable->render('didinkaj-approval::workflow_stage_check_lists.index');
     }
 
     /**
@@ -66,7 +66,7 @@ class WorkflowStageCheckListController extends AppBaseController
 
         Flash::success('Workflow Stage Check List saved successfully.');
 
-        return redirect(route('wizpack::workflowStageCheckLists.index'));
+        return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
     }
 
     /**
@@ -83,7 +83,7 @@ class WorkflowStageCheckListController extends AppBaseController
         if (empty($workflowStageCheckList)) {
             Flash::error('Workflow Stage Check List not found');
 
-            return redirect(route('wizpack::workflowStageCheckLists.index'));
+            return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
         }
 
         return view('wizpack::workflow_stage_check_lists.show')->with('workflowStageCheckList', $workflowStageCheckList);
@@ -103,7 +103,7 @@ class WorkflowStageCheckListController extends AppBaseController
         if (empty($workflowStageCheckList)) {
             Flash::error('Workflow Stage Check List not found');
 
-            return redirect(route('wizpack::workflowStageCheckLists.index'));
+            return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
         }
 
         return view('wizpack::workflow_stage_check_lists.edit')
@@ -127,14 +127,14 @@ class WorkflowStageCheckListController extends AppBaseController
         if (empty($workflowStageCheckList)) {
             Flash::error('Workflow Stage Check List not found');
 
-            return redirect(route('wizpack::workflowStageCheckLists.index'));
+            return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
         }
 
         $workflowStageCheckList = $this->workflowStageCheckListRepository->update($request->all(), $id);
 
         Flash::success('Workflow Stage Check List updated successfully.');
 
-        return redirect(route('wizpack::workflowStageCheckLists.index'));
+        return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
     }
 
     /**
@@ -152,13 +152,13 @@ class WorkflowStageCheckListController extends AppBaseController
         if (empty($workflowStageCheckList)) {
             Flash::error('Workflow Stage Check List not found');
 
-            return redirect(route('wizpack::workflowStageCheckLists.index'));
+            return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
         }
 
         $this->workflowStageCheckListRepository->delete($id);
 
         Flash::success('Workflow Stage Check List deleted successfully.');
 
-        return redirect(route('wizpack::workflowStageCheckLists.index'));
+        return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
     }
 }

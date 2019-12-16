@@ -56,7 +56,7 @@ class WorkflowStageApproversController extends AppBaseController
      */
     public function create()
     {
-        return view('wizpack::workflow_stage_approvers.create')
+        return view('didinkaj-approval::workflow_stage_approvers.create')
             ->withUsers($this->userRepository->all()->pluck('name', 'id'))
             ->withWorkflowStage($this->stagesRepository->with('workflowStageType')->get()->pluck('workflowStageType.name', 'id'))
             ->withWorkFlowStageTypes($this->stageTypesRepository->all()->pluck('name', 'id'));
@@ -108,7 +108,7 @@ class WorkflowStageApproversController extends AppBaseController
             return redirect(route('workflowStageApprovers.index'));
         }
 
-        return view('wizpack::workflow_stage_approvers.show')->with('workflowStageApprovers', $workflowStageApprovers);
+        return view('didinkaj-approval::workflow_stage_approvers.show')->with('workflowStageApprovers', $workflowStageApprovers);
     }
 
     /**
@@ -125,7 +125,7 @@ class WorkflowStageApproversController extends AppBaseController
         if (empty($workflowStageApprovers)) {
             Flash::error('Workflow Stage Approvers not found');
 
-            return redirect(route('wizpack::workflowStageApprovers.index'));
+            return redirect(route('didinkaj-approval::workflowStageApprovers.index'));
         }
 
         return view('wizpack::workflow_stage_approvers.edit')
@@ -166,7 +166,7 @@ class WorkflowStageApproversController extends AppBaseController
 
         Flash::success('Workflow Stage Approvers updated successfully.');
 
-        return redirect(route('wizpack::workflowStageApprovers.index'));
+        return redirect(route('didinkaj-approval::workflowStageApprovers.index'));
     }
 
     /**
@@ -191,6 +191,6 @@ class WorkflowStageApproversController extends AppBaseController
 
         Flash::success('Workflow Stage Approvers deleted successfully.');
 
-        return redirect(route('wizpack::workflowStageApprovers.index'));
+        return redirect(route('didinkaj-approval::workflowStageApprovers.index'));
     }
 }
