@@ -1,8 +1,8 @@
-<li class="{{ Request::is('wizpack/approvals*') ? 'active' : '' }}">
-    <a href="{!! route('wizpack::approvals.index') !!}"><i class="fa fa-edit"></i><span>Approvals</span></a>
+<li class="{{ Request::is('workflow/approvals*') ? 'active' : '' }}">
+    <a href="{!! route('didinkaj-approval::approvals.index') !!}"><i class="fa fa-edit"></i><span>Approvals</span></a>
 </li>
 
-<li class="{{ Request::is('wizpack/workflow*') ? 'active' : '' }} treeview">
+<li class="{{ Request::is('workflow/workflow*') ? 'active' : '' }} treeview">
     <a href="#">
         <i class="fa fa-dashboard"></i> <span>WorkFlow</span>
         <span class="pull-right-container">
@@ -11,24 +11,24 @@
     </a>
     <ul class="treeview-menu">
 
-        <li class="{{ Request::is('wizpack/workflowStages*') ? 'active' : '' }}">
-            <a href="{!! route('wizpack::workflowStages.index') !!}"><i class="fa fa-edit"></i><span>Workflow Stages</span></a>
+        <li class="{{ Request::is('workflow/workflowStages*') ? 'active' : '' }}">
+            <a href="{!! route('didinkaj-approval::workflowStages.index') !!}"><i class="fa fa-edit"></i><span>Workflow Stages</span></a>
         </li>
-        <li class="{{ Request::is('wizpack/workflowStageApprovers*') ? 'active' : '' }}">
-            <a href="{!! route('wizpack::workflowStageApprovers.index') !!}"><i class="fa fa-edit"></i><span>Workflow Stage Approvers</span></a>
-        </li>
-
-        <li class="{{ Request::is('wizpack/workflowStageCheckLists*') ? 'active' : '' }}">
-            <a href="{!! route('wizpack::workflowStageCheckLists.index') !!}"><i class="fa fa-edit"></i><span>Workflow Stage Check Lists</span></a>
+        <li class="{{ Request::is('workflow/workflowStageApprovers*') ? 'active' : '' }}">
+            <a href="{!! route('didinkaj-approval::workflowStageApprovers.index') !!}"><i class="fa fa-edit"></i><span>Workflow Stage Approvers</span></a>
         </li>
 
-        <li class="{{ Request::is('wizpack/workflowStageTypes*') ? 'active' : '' }}">
-            <a href="{!! route('wizpack::workflowStageTypes.index') !!}"><i
+        <li class="{{ Request::is('workflow/workflowStageCheckLists*') ? 'active' : '' }}">
+            <a href="{!! route('didinkaj-approval::workflowStageCheckLists.index') !!}"><i class="fa fa-edit"></i><span>Workflow Stage Check Lists</span></a>
+        </li>
+
+        <li class="{{ Request::is('workflow/workflowStageTypes*') ? 'active' : '' }}">
+            <a href="{!! route('didinkaj-approval::workflowStageTypes.index') !!}"><i
                         class="fa fa-edit"></i><span>Workflow Stage Types</span></a>
         </li>
 
-        <li class="{{ Request::is('wizpack/workflowTypes*') ? 'active' : '' }}">
-            <a href="{!! route('wizpack::workflowTypes.index') !!}"><i class="fa fa-edit"></i><span>Workflow Types</span></a>
+        <li class="{{ Request::is('workflow/workflowTypes*') ? 'active' : '' }}">
+            <a href="{!! route('didinkaj-approval::workflowTypes.index') !!}"><i class="fa fa-edit"></i><span>Workflow Types</span></a>
         </li>
 
     </ul>

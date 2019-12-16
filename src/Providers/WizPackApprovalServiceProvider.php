@@ -18,7 +18,7 @@ class WizPackApprovalServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
-        $this->loadViewsFrom(dirname(__DIR__) . '/Views', 'wizpack');
+        $this->loadViewsFrom(dirname(__DIR__) . '/Views', 'didinkaj-approval');
     }
 
 }
