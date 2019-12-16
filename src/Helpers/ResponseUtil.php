@@ -1,8 +1,6 @@
 <?php
 
-
-namespace Didinkaj\Approval\Http\Requests\API;
-
+namespace Didinkaj\Approval\Helpers;
 
 class ResponseUtil
 {

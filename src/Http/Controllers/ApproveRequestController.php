@@ -3,6 +3,7 @@
 namespace Didinkaj\Approvalw\Http\Controllers;
 
 use Didinkaj\Approval\Events\WorkflowStageApproved;
+use Didinkaj\Approval\Http\Controllers\AppBaseController;
 use Didinkaj\Approval\Repositories\ApprovalsRepository;
 use Didinkaj\Approval\Repositories\WorkflowStageApproversRepository;
 use Didinkaj\Approval\Repositories\WorkflowStepRepository;

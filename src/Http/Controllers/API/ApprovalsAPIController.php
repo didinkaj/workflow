@@ -8,7 +8,7 @@ use Didinkaj\Approval\Http\Requests\API\UpdateApprovalsAPIRequest;
 use Didinkaj\Approval\Models\Approvals;
 use Illuminate\Http\Request;
 use Didinkaj\Approval\Http\Controllers\AppBaseController;
-use Didinkaj\ApprovalRepositories\API\ApprovalsRepository;
+use Didinkaj\Approval\Repositories\API\ApprovalsRepository;
 
 
 /**

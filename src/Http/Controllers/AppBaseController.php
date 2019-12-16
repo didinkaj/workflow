@@ -2,7 +2,7 @@
 
 namespace Didinkaj\Approval\Http\Controllers;
 
-use InfyOm\Generator\Utils\ResponseUtil;
+use Didinkaj\Approval\Helpers\ResponseUtil;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Routing\Controller;
 

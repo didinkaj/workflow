@@ -2,7 +2,6 @@
 
 namespace Didinkaj\Approval\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 use Didinkaj\Approval\DataTables\ApprovalsDataTable;
 use Didinkaj\Approval\Http\Requests\CreateApprovalsRequest;
 use Didinkaj\Approval\Http\Requests\UpdateApprovalsRequest;

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::group([
         'as'=>'didinkaj-approval-api::',
         'namespace' => 'Didinkaj\Approval\Http\Controllers\API',
-        'prefix'=>'api/approval',
+        'prefix'=>'api/workflow',
         'middleware' => ['web', 'auth']]
     , function () {
 
