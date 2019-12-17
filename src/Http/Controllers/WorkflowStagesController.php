@@ -95,7 +95,7 @@ class WorkflowStagesController extends AppBaseController
             return redirect(route('didinkaj-approval::workflowStages.index'));
         }
 
-        return view('wizpack::workflow_stages.show')
+        return view('didinkaj-approval::workflow_stages.show')
             ->withWorkflowStages($workflowStages)
             ->withWorkFlowTypes($this->workflowTypesRepository->all(['name','id'])->pluck('name', 'id'))
             ->withWorkFlowStageTypes($this->stageTypesRepository->all(['name','id'])->pluck('name', 'id'));
@@ -118,7 +118,7 @@ class WorkflowStagesController extends AppBaseController
             return redirect(route('didinkaj-approval::workflowStages.index'));
         }
 
-        return view('wizpack::workflow_stages.edit')->with('workflowStages', $workflowStages)
+        return view('didinkaj-approval::workflow_stages.edit')->with('workflowStages', $workflowStages)
             ->withWorkFlowTypes($this->workflowTypesRepository->all(['name','id'])->pluck('name', 'id'))
             ->withWorkFlowStageTypes($this->stageTypesRepository->all(['name','id'])->pluck('name', 'id'));
     }

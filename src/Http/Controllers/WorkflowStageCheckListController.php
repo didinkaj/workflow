@@ -46,7 +46,7 @@ class WorkflowStageCheckListController extends AppBaseController
      */
     public function create()
     {
-        return view('wizpack::workflow_stage_check_lists.create')
+        return view('didinkaj-approval::workflow_stage_check_lists.create')
             ->withWorkflowStages($this->workflowStages->with(['workflowStageType'])->get()->pluck('workflowStageType.name','id'));
     }
 
@@ -106,7 +106,7 @@ class WorkflowStageCheckListController extends AppBaseController
             return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
         }
 
-        return view('wizpack::workflow_stage_check_lists.edit')
+        return view('didinkaj-approval::workflow_stage_check_lists.edit')
             ->with('workflowStageCheckList', $workflowStageCheckList)
             ->withWorkflowStages($this->workflowStages->with(['workflowStageType'])->get()->pluck('workflowStageType.name','id'));
     }

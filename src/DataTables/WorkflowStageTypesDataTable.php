@@ -20,7 +20,7 @@ class WorkflowStageTypesDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'wizpack::workflow_stage_types.datatables_actions');
+        return $dataTable->addColumn('action', 'didinkaj-approval::workflow_stage_types.datatables_actions');
     }
 
     /**

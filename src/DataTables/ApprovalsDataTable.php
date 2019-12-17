@@ -36,7 +36,7 @@ class ApprovalsDataTable extends DataTable
             ->addColumn('approval_type', function ($query){
                 return $query->workflow->name;
             })
-            ->addColumn('action', 'wizpack::approvals.datatables_actions')
+            ->addColumn('action', 'didinkaj-approval::approvals.datatables_actions')
             ->rawColumns(['status','action']);
     }
 

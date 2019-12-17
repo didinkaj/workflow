@@ -27,7 +27,7 @@ class WorkflowStageCheckListDataTable extends DataTable
             ->addColumn('workflowStage', function ($q) {
                 return $q->workflowStages->workflowStageType->name;
             })
-            ->addColumn('action', 'wizpack::workflow_stage_check_lists.datatables_actions');
+            ->addColumn('action', 'didinkaj-approval::workflow_stage_check_lists.datatables_actions');
     }
 
     /**

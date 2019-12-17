@@ -46,7 +46,7 @@ class WorkflowStageApproversController extends AppBaseController
      */
     public function index(WorkflowStageApproversDataTable $workflowStageApproversDataTable)
     {
-        return $workflowStageApproversDataTable->render('wizpack::workflow_stage_approvers.index');
+        return $workflowStageApproversDataTable->render('didinkaj-approval::workflow_stage_approvers.index');
     }
 
     /**
@@ -88,7 +88,7 @@ class WorkflowStageApproversController extends AppBaseController
 
         Flash::success('Workflow Stage Approvers saved successfully.');
 
-        return redirect(route('wizpack::workflowStageApprovers.index'));
+        return redirect(route('didinkaj-approval::workflowStageApprovers.index'));
     }
 
     /**
@@ -128,7 +128,7 @@ class WorkflowStageApproversController extends AppBaseController
             return redirect(route('didinkaj-approval::workflowStageApprovers.index'));
         }
 
-        return view('wizpack::workflow_stage_approvers.edit')
+        return view('didinkaj-approval::workflow_stage_approvers.edit')
             ->with('workflowStageApprovers', $workflowStageApprovers)
             ->withUsers($this->userRepository->all()->pluck('name', 'id'))
             ->withWorkflowStage($this->stagesRepository->with('workflowStageType')->get()->pluck('workflowStageType.name', 'id'))
