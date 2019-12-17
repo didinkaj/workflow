@@ -105,7 +105,7 @@ class WorkflowStageApproversController extends AppBaseController
         if (empty($workflowStageApprovers)) {
             Flash::error('Workflow Stage Approvers not found');
 
-            return redirect(route('workflowStageApprovers.index'));
+            return redirect(route('didinkaj-approval::workflowStageApprovers.index'));
         }
 
         return view('didinkaj-approval::workflow_stage_approvers.show')->with('workflowStageApprovers', $workflowStageApprovers);
@@ -152,7 +152,7 @@ class WorkflowStageApproversController extends AppBaseController
         if (empty($workflowStageApprovers)) {
             Flash::error('Workflow Stage Approvers not found');
 
-            return redirect(route('workflowStageApprovers.index'));
+            return redirect(route('didinkaj-approval::workflowStageApprovers.index'));
         }
         $input = $request->all();
 
@@ -184,7 +184,7 @@ class WorkflowStageApproversController extends AppBaseController
         if (empty($workflowStageApprovers)) {
             Flash::error('Workflow Stage Approvers not found');
 
-            return redirect(route('workflowStageApprovers.index'));
+            return redirect(route('didinkaj-approval::workflowStageApprovers.index'));
         }
 
         $this->workflowStageApproversRepository->delete($id);

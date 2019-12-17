@@ -86,7 +86,7 @@ class WorkflowStageCheckListController extends AppBaseController
             return redirect(route('didinkaj-approval::workflowStageCheckLists.index'));
         }
 
-        return view('wizpack::workflow_stage_check_lists.show')->with('workflowStageCheckList', $workflowStageCheckList);
+        return view('didinkaj-approval::workflow_stage_check_lists.show')->with('workflowStageCheckList', $workflowStageCheckList);
     }
 
     /**

@@ -122,7 +122,7 @@ class WorkflowTypesController extends AppBaseController
         if (empty($workflowTypes)) {
             Flash::error('Workflow Types not found');
 
-            return redirect(route('workflowTypes.index'));
+            return redirect(route('didinkaj-approval::workflowTypes.index'));
         }
 
         $workflowTypes = $this->workflowTypesRepository->update($request->all(), $id);

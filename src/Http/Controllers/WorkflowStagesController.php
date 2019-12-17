@@ -178,6 +178,6 @@ class WorkflowStagesController extends AppBaseController
 
         Flash::success('Workflow Stages deleted successfully.');
 
-        return redirect(route('workflowStages.index'));
+        return redirect(route('didinkaj-approval::workflowStages.index'));
     }
 }
