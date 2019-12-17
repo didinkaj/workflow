@@ -13,7 +13,7 @@
                <div class="row">
                    {!! Form::model($workflowStageApprovers, ['route' => ['wizpack::workflowStageApprovers.update', $workflowStageApprovers->id], 'method' => 'patch']) !!}
 
-                        @include('wizpack::workflow_stage_approvers.fields')
+                        @include('didinkaj-approval::workflow_stage_approvers.fields')
 
                    {!! Form::close() !!}
                </div>

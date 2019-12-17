@@ -73,11 +73,11 @@
                                 </td>
                                 <td class="text-center" style="vertical-align: center">
                                     @if($stage['is_current_stage'] && $stage['canApproveStage'] && !$stage['is_stage_complete'])
-                                        <a href="{{url('/wizpack/workflowApproveRequest/'.$workflow['id'].'/'.$stage['id'])}}"
+                                        <a href="{{url('/workflow/workflowApproveRequest/'.$workflow['id'].'/'.$stage['id'])}}"
                                            class="btn btn-primary btn-sm"> CheckList</a>
-                                        <a href="{{url('/wizpack/workflowApproveRequest/'.$workflow['id'].'/'.$stage['id'])}}"
+                                        <a href="{{url('/workflow/workflowApproveRequest/'.$workflow['id'].'/'.$stage['id'])}}"
                                            class="btn btn-success btn-sm">Approve</a>
-                                        <a href="{{url('/wizpack/workflowRejecctRequest/'.$workflow['id'].'/'.$stage['id'])}}"
+                                        <a href="{{url('/workflow/workflowRejecctRequest/'.$workflow['id'].'/'.$stage['id'])}}"
                                            class="btn btn-danger btn-sm">Rejecct</a>
                                     @endif
                                 </td>
@@ -86,7 +86,7 @@
                         </tbody>
                     </table>
                 </div>
-                <a href="{!! route('wizpack::approvals.index') !!}" class="btn btn-default">Back</a>
+                <a href="{!! route('didinkaj-approval::approvals.index') !!}" class="btn btn-default">Back</a>
             </div>
         </div>
     </section>

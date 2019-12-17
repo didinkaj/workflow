@@ -10,8 +10,8 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
-                    @include('wizpack::workflow_stage_types.show_fields')
-                    <a href="{!! route('wizpack::workflowStageTypes.index') !!}" class="btn btn-default">Back</a>
+                    @include('didinkaj-approval::workflow_stage_types.show_fields')
+                    <a href="{!! route('didinkaj-approval::workflowStageTypes.index') !!}" class="btn btn-default">Back</a>
                 </div>
             </div>
         </div>

@@ -1,9 +1,9 @@
-{!! Form::open(['route' => ['wizpack::workflowStageCheckLists.destroy', $id], 'method' => 'delete']) !!}
+{!! Form::open(['route' => ['didinkaj-approval::workflowStageCheckLists.destroy', $id], 'method' => 'delete']) !!}
 <div class='btn-group'>
-    <a href="{{ route('wizpack::workflowStageCheckLists.show', $id) }}" class='btn btn-default btn-xs'>
+    <a href="{{ route('didinkaj-approval::workflowStageCheckLists.show', $id) }}" class='btn btn-default btn-xs'>
         <i class="glyphicon glyphicon-eye-open"></i>
     </a>
-    <a href="{{ route('wizpack::workflowStageCheckLists.edit', $id) }}" class='btn btn-default btn-xs'>
+    <a href="{{ route('didinkaj-approval::workflowStageCheckLists.edit', $id) }}" class='btn btn-default btn-xs'>
         <i class="glyphicon glyphicon-edit"></i>
     </a>
     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', [

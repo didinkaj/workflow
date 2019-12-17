@@ -11,9 +11,9 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($workflowStages, ['route' => ['wizpack::workflowStages.update', $workflowStages->id], 'method' => 'patch']) !!}
+                   {!! Form::model($workflowStages, ['route' => ['didinkaj-approval::workflowStages.update', $workflowStages->id], 'method' => 'patch']) !!}
 
-                        @include('wizpack::workflow_stages.fields')
+                        @include('didinkaj-approval::workflow_stages.fields')
 
                    {!! Form::close() !!}
                </div>

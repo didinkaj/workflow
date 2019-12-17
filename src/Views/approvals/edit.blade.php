@@ -11,9 +11,9 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($approvals, ['route' => ['wizpack::approvals.update', $approvals->id], 'method' => 'patch']) !!}
+                   {!! Form::model($approvals, ['route' => ['didinkaj-approval::approvals.update', $approvals->id], 'method' => 'patch']) !!}
 
-                        @include('wizpack::approvals.fields')
+                        @include('didinkaj-approval::approvals.fields')
 
                    {!! Form::close() !!}
                </div>

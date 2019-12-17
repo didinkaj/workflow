@@ -11,9 +11,9 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($workflowStageCheckList, ['route' => ['wizpack::workflowStageCheckLists.update', $workflowStageCheckList->id], 'method' => 'patch']) !!}
+                   {!! Form::model($workflowStageCheckList, ['route' => ['didinkaj-approval::workflowStageCheckLists.update', $workflowStageCheckList->id], 'method' => 'patch']) !!}
 
-                        @include('wizpack::workflow_stage_check_lists.fields')
+                        @include('didinkaj-approval::workflow_stage_check_lists.fields')
 
                    {!! Form::close() !!}
                </div>

@@ -1,4 +1,4 @@
-@extends('wizpack::layouts.default')
+@extends('didinkaj-approval::layouts.default')
 @section('content')
     <p>Hello</p>
     @if(!empty($approvalInfo['next_stage']))

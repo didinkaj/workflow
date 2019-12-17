@@ -12,9 +12,9 @@
 
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'wizpack::workflowStageApprovers.store']) !!}
+                    {!! Form::open(['route' => 'didinkaj-approval::workflowStageApprovers.store']) !!}
 
-                        @include('wizpack::workflow_stage_approvers.fields')
+                        @include('didinkaj-approval::workflow_stage_approvers.fields')
 
                     {!! Form::close() !!}
                 </div>
