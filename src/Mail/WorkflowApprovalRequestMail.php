@@ -43,6 +43,6 @@ class WorkflowApprovalRequestMail extends Mailable
     {
         $subject = "Approval request: #". $this->workflow->id.' '.$this->workflow->name;
 
-        return $this->subject($subject)->view('wizpack::emails.approval-request');
+        return $this->subject($subject)->view('didinkaj-approval::emails.approval-request');
     }
 }
