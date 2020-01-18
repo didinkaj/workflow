@@ -1,6 +1,6 @@
 <?php
 
-namespace Didinkaj\Approvalw\Http\Controllers;
+namespace Didinkaj\Approval\Http\Controllers;
 
 use Didinkaj\Approval\Events\WorkflowStageApproved;
 use Didinkaj\Approval\Http\Controllers\AppBaseController;
