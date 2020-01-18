@@ -47,6 +47,6 @@ class WorkflowRejectedMail extends Mailable
     {
         $subject = "Approval request: #". $this->workflow['id'].' '.$this->workflow['name'];
 
-        return $this->subject($subject)->view('wizpack::emails.workflow-step-rejected');
+        return $this->subject($subject)->view('didinkaj-approval::emails.workflow-step-rejected');
     }
 }
